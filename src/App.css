@@ -1,16 +1,81 @@
 .nav {
-  background-color: red;
-  height: 4vw;
+  height: 3.7vw;
   position: sticky;
   display: flex;
   justify-content: center;
-  
 }
-.nav p{
-  font-weight: 700;
-  margin-right: 7vw;
+
+.nav p {
+  font-weight: 600;
+  margin-right: 6vw;
   cursor: pointer;
 }
+
 .nav p:last-child {
   margin-right: 0;
+}
+
+nav {
+  height: 3.7vw;
+  display: flex;
+  align-items: center;
+  padding: 0px 1vw;
+  z-index: 20;
+  
+  /* Bottom shadow for <nav> */
+}
+
+nav p {
+  cursor: pointer;
+  margin-right: 3vw;
+  color: white;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-icon {
+  cursor: pointer;
+  background: none;
+  border: none;
+  animation: rotate 2s infinite linear;
+}
+
+.icon {
+  height: 2.5vw;
+  width: 5vw;
+  background: rgb(138, 80, 161);
+  border-radius: 5px;
+}
+
+.color-options {
+  position: relative;
+  border-radius: 5px;
+  left: 1.5vw;
+  width: 10vw;
+  height: auto;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
+  animation: fade .8s linear;
+  
+}
+
+@keyframes fade {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.second-nav{
+  box-shadow: 0 2px 4px rgba(0,0,0,.4);
 }
