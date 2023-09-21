@@ -18,7 +18,7 @@ const DefaultLayout = (props: any) => {
         <>
             <NavBar navColor={navColor} />
             <div style={{
-                background:navColor,
+                // backgroundImage:navColor,
                 height:"10vw",
                 position:"relative",
                 
