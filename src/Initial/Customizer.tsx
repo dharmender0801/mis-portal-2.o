@@ -17,6 +17,7 @@ const Customizer = (props: any) => {
     };
     const handleColorChange = (e: any) => {
         props.onColorChange(e);
+        localStorage.setItem('navColor', e);
     };
     return (
         <div style={{
@@ -25,11 +26,11 @@ const Customizer = (props: any) => {
         }}>
             <div className="icon">
                 <button className={`rotate-icon`} onClick={toggleCustomizer}>
-                    <FcSettings size={30} />
+                    <FcSettings size={30} color="white"/>
                 </button>
             </div>
 
-            <div style={{ display: "flex", padding: ".8em", position: "relative", right: "10vw" }}>
+            <div style={{ display: "flex", padding: ".8em", position: "relative", right: "10vw"}}>
 
                 {
                     isOpen && (
@@ -41,7 +42,7 @@ const Customizer = (props: any) => {
                                 gridTemplateColumns: "repeat(4, 1fr)",
                                 gridRowGap: "8px",
                                 gridColumnGap: "5px"
-                                , padding: "10px"
+                                , padding: "10px",background:"white" ,borderRadius:"5px"
                             }}>
                                 {
                                     color.map((item) => {

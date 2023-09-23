@@ -10,22 +10,25 @@ const DefaultLayout = (props: any) => {
     });
     const getColor = (e: any) => {
         setNavColor(e);
-        localStorage.setItem('navColor', navColor);
     }
 
 
     return (
         <>
             <NavBar navColor={navColor} />
-            <div style={{
-                // backgroundImage:navColor,
-                height:"10vw",
-                position:"relative",
-                
-            
-            }}></div>
+            <div
+                className="dashboard-container"
+                style={{
+                    backgroundImage: navColor,
+                    height: "12vw",
+                    position: "relative",
+                    marginBottom: "20px"
+                }} />
             <Customizer onColorChange={getColor} />
-            <Outlet />
+            <div className="content-container" >
+                
+                <Outlet />
+            </div>
         </>
     )
 }

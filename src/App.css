@@ -1,4 +1,4 @@
-.bg{
+.bg {
   width: 100%;
   height: 100%;
 }
@@ -80,19 +80,42 @@ nav p {
   }
 }
 .second-nav {
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
-  position: relative; /* Add this for stacking context */
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
+  position: relative;
   z-index: 1;
-
 }
 
 .dashboard-container {
   width: 100%;
-  height: 100px;
-  position: relative; 
+  position: relative;
   z-index: 0;
 }
 .flex-div {
   align-items: center;
   display: flex;
+}
+.content-container {
+  position: absolute;
+  top: 8vw;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center !important; */
+  align-items: center; 
+}
+.content-bg {
+  background: rgb(255, 255, 255);
+  height: 34vw;
+  border-radius: 5px;
+  width: 97%;
+  box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+}
+.name-container{
+  display: flex;
+  justify-content: flex-start;
+  width: 96%;
+  color: white;
+
 }
