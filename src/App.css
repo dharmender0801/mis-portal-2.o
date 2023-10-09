@@ -7,12 +7,15 @@
   position: sticky;
   display: flex;
   justify-content: center;
+  gap: 40px;
 }
-
+.nav a {
+  text-decoration: none !important;
+}
 .nav p {
   font-weight: 600;
-  margin-right: 6vw;
   cursor: pointer;
+  color: black !important;
 }
 
 .nav p:last-child {
@@ -23,16 +26,14 @@ nav {
   height: 3.7vw;
   display: flex;
   align-items: center;
-  padding: 0px 1vw;
+  padding: 0px 2vw;
   z-index: 20;
-
-  /* Bottom shadow for <nav> */
 }
 
 nav p {
   cursor: pointer;
   margin-right: 3vw;
-  color: white;
+  color: white !important;
 }
 
 @keyframes rotate {
@@ -101,7 +102,7 @@ nav p {
   display: flex;
   flex-direction: column;
   /* justify-content: center !important; */
-  align-items: center; 
+  align-items: center;
 }
 .content-bg {
   background: rgb(255, 255, 255);
@@ -112,10 +113,60 @@ nav p {
   display: flex;
   justify-content: center;
 }
-.name-container{
+.name-container {
   display: flex;
   justify-content: flex-start;
   width: 96%;
   color: white;
+}
 
+.drop-nav {
+  align-items: center;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(14, 3, 3, 0.2);
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 5em;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  padding: 2px;
+  position: relative;
+  right: 10px;
+  text-align: center;
+  /* top: ; */
+  bottom: 3px;
+  width: 9em;
+  z-index: 30;
+  overflow: hidden;
+}
+.country-wrapper {
+  position: relative;
+}
+.menu-content {
+  display: flex;
+  flex-direction: row;
+  left: 0;
+  position: absolute;
+  top: 100%;
+}
+.drop-nav span:hover {
+}
+.w-100 {
+  padding: 8px;
+  width: 100%;
+}
+.w-100:hover {
+  background-color: rgb(177, 177, 177);
+}
+.drop-nav span {
+  padding: 8px;
+  color: black !important;
+  text-decoration: none;
+}
+.drop-nav a {
+  text-decoration: none !important;
 }
